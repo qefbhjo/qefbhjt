@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link href="https://fonts.googleapis.com/css?family=Jua&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-	 crossorigin="anonymous">
-
-	<title>블랙클로버 인물 닮은꼴 찾기</title>
+	 crossorigin="anonymous" <title>블랙클로버 인물 닮은꼴 찾기</title>
 	<meta name="title" content="블랙클로버 인물 닮은꼴 찾기">
 	<meta name="subject" content="나와 닮은 블랙클로버 캐릭을 찾아보세요!">
-	<meta name="keywords" content="블랙클로버 인물 닮은꼴 찾기, 인공지능 블랙클로버 인물 닮은꼴 찾기, 나와 닮은 연예인, black clover, 얼굴 평가, 오징어게임, 아스타, 유노, 노엘, 율리유스, 락">
+	<meta name="keywords" content="블랙클로버 인물 닮은꼴 찾기, 인공지능 블랙클로버 인물 닮은꼴 찾기, 나와 닮은 연예인, black clover, 얼굴 평가, 오징어게임, 아스타, 유노, 노엘, 율리우스, 락">
 	<meta name="author" content="코난쌤">
 	<link rel="stylesheet" href="style.css">
-	<link rel="canonical" href="https://squidgameai.netlify.app/" />
-	<meta property="og:url" content="https://squidgameai.netlify.app/" />
+	<link rel="canonical" href="https://Black Cloverai.netlify.app/" />
+	<meta property="og:url" content="https://Black CloveraKi.netlify.app/" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="오징어게임 인물 닮은꼴" />
 	<meta property="og:description" content="오징어게임 인물 닮은꼴 찾기, 인공지능 블랙클로버 인물 닮은꼴 찾기, 나와 닮은 애니캐, black clover, 얼굴 평가, 블랙클로버, 아스타, 유노, 노엘, 율리우스, 락"
 	/>
-	<meta property="og:image" content="./thumnail.png" />
+	<meta property="og:image" content="./BlackCloversumname.png" />
 	<meta name="google-site-verification" content="PD9c4HJRQfHMMuxzKekUbCd8jdX6iIqEqsj2S9p3Cvc" />
 </head>
 
 <body>
 	<script type="text/javascript">
-		const URL= https://teachablemachine.withgoogle.com/models/jVF7rld9u/;
+		const URL= 'https://teachablemachine.withgoogle.com/models/jVF7rld9u/'
         
         let model, labelContainer, maxPredictions;
         async function init() {
@@ -50,17 +49,17 @@
                switch (prediction[0].className) {
                     case "Astar":
                         resultTitle = "아스타"
-                        resultExplain = "나는 마법제가 될거야!:
+                        resultExplain = "나는 마법제가 될거야!:"
                         resultCeleb = ""
                         resultpic = "./Astar.jpg"
                         break;
-                    case "Yuno":
+                    case "yuno":
                         resultTitle = "유노"
-                        resultExplain = "너 같은건 아스타에게 역부족이다"
+                        resultExplain = "널 이길수 있는건 나다 아스타"
                         resultCeleb = ""
                         resultpic = "./Yuno.jpg"
                         break;
-                    case "ilnam":
+                    case "Nole":
                         resultTitle = "Nole"
                         resultExplain = "나는 왕족이야"
                         resultCeleb = ""
@@ -68,7 +67,7 @@
                         break;
                     case "Julius":
                         resultTitle = "율리우스"
-                        resultExplain = "재밌는 마법을 볼수있겠군"
+                        resultExplain = "재밌는 마법을 구경을 할 수 있겠군"
                         resultCeleb = ""
                         resultpic = "./Julius.jpg"
                         break;
@@ -90,7 +89,7 @@
             var celeb = "<div class='" + prediction[0].className + "-animal-celeb pt-2 pb-2'>" + resultCeleb + "</div>"
             var pic = "<img src='" + resultpic +"'width='60%' heigt='auto'>"
             $('.result-message').html(pic + title + explain + celeb );
-            console.log(pic);
+            console.log(prediction);
             var barWidth;
             
             for (let i = 0; i < maxPredictions; i++) {
@@ -106,7 +105,7 @@
                     case "Astar":
                         labelTitle = "아스타(Astar)"
                         break;
-                    case "Yuno":
+                    case "yuno":
                         labelTitle = "유노(Yuno)"
                         break;
                     case "Nole":
@@ -131,7 +130,7 @@
 	</script>
 
 	<nav class="p-3 container navbar navbar-expand-lg navbar-light">
-		<a class="navbar-brand" href="https://squidgameai.netlify.app/">블랙클로버 인물 닮은꼴 테스트</a>
+		<a class="navbar-brand" href="https://BlackCloverai.netlify.app/">블랙클로버 인물 닮은꼴 테스트</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -174,7 +173,7 @@
         <div class="image-upload-wrap">
             <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
             <div class="drag-text">
-                <img src="img/squidgame.png" class="mt-5 pt-5 upload">
+                <img src="./BlackClover.png" class="mt-5 pt-5 upload">
                 <h3 class="mb-5 pb-5 pt-4  upload-text">사진을 올려놓거나 눌러서 <p>업로드하세요!</p><p>upload pictures</p></h3>
             </div>
         </div>
@@ -188,7 +187,10 @@
             </div>
             <p class="result-message"></p>
             <div id="label-container" class="d-flex flex-column justify-content-around"></div>
-            <div id="addThis" class="addthis_inline_share_toolbox_6lz1"></div>
+
+            <div class="addthis_inline_share_toolbox"></div>
+            
+            
 
             <div class="pt-3 image-title-wrap">
                 <button type="button p-2" class="try-again-btn" onclick="window.location.reload();">
@@ -235,7 +237,31 @@
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
 
-    
+ <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://qeffbhhjt.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-61e0ff7b9b5ffbbe"></script>
+
+
 </body>
 
 <footer class="footer pt-5 container d-flex justify-content-center">
